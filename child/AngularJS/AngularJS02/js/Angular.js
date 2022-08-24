@@ -8,7 +8,7 @@ app.controller('myCtrl', function($scope) {
     if($scope.keyval == 13) {
       event.preventDefault();
       $scope.workList.push($scope.workName);
-      if(checkRepeat($scope.workList) && checkNull($scope.workName)){
+      if(checkRepeat($scope.workList)|| checkNull($scope.workName)){
       $scope.workList.splice(-1);
     } else {
       $scope.workName = '';

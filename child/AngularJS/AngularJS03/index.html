@@ -155,7 +155,7 @@
             </tr>
           </thead>
           <tbody id="output">
-            <tr ng-repeat="student in dataList">
+            <tr ng-repeat="student in dataList" ng-cloak>
               <td>{{student["no"]}}</td>
               <td style="text-transform: capitalize">{{student["name"]}}</td>
               <td>{{student["gender"]}}</td>
