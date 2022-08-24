@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài tập JS</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <!-- Topbar -->
+    <div class="Topbar">
+        <div class="Topbar-title">Bài tập JS tổng hợp</div>
+        <ul>
+            <li class="Topbar-item"><a href="#main">JQuery</a></li>
+            <li class="Topbar-item"><a href="#main">AngularJS</a></li>
+            <li class="Topbar-item"><a href="#main">More...</a></li>
+        </ul>
+    </div>
+    <!-- Header -->
+    <div class="header">
+        <img src="images/Goku.jpg" alt="">
+        <h1 class="title">JavaScript</h1>
+        <div class="subtitle">Bài tập về <span class="subtitle subtitle-run">JQuery và AngularJS</span></div>
+        <div class="button">
+            <div class="widget">
+                <a href="https://www.facebook.com/q5nguyen/" class="social">
+                    <i class="bi bi-facebook"></i>
+                    <span>&nbsp;Facebook</span>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="bi bi-github"></i>
+                    <span>&nbsp;Github</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Main -->
+    <div class="main" id="main">
+        <div class="main-toolbar">
+            <div class="main-group">Tất cả 06 mục</div>
+            <div class="main-group"><input type="text" placeholder="Search..." ng-model="value"></div>
+            <div class="main-group">
+               <button class="main-group-link is-active" ng-click="filAll()">All</button>
+               <button class="main-group-link" ng-click="filJquery()">JQuery</button>
+               <button class="main-group-link" ng-click="filAngularJS()">AngularJS</button>
+<!--                <a class="main-group-link" href="#">Con người</a> -->
+            </div>
+        </div>
+        <div class="main-blogs">
+            <a href="{{item.link}}" class="blog" ng-repeat="item in listLink | filter:{title: value, des: description}">
+                <span  class="blog-img">
+                    <img src="{{item.img}}" alt="">
+                </span>
+                <h3 class="blog-title"  style="color: 'item.color'">{{item.title}}</h3>
+                <div class="blog-views">{{item.view}}</div>
+            </a href="#">
+        </div>
+        <div class="main-aside">
+            <h4 class="title title-color">More Exercise</h4>
+            <div class="main-box">
+                <div class="main-box-title">Somethings here</div>
+                <div class="main-box-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <button>Get more exercise</button>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Footer -->
+   <div class="footer">
+    <div>Made with <i class="bi bi-heart-fill heart"></i> by me</div>
+    <div>Email: <a href="mailto:q5nguyenn@gamil.com">q5nguyenn@gamil.com</a></div>
+   </div>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="js/main.js"></script>
+    <script src="js/Angular.js"></script>
+    <script src="js/JQuery.js"></script>
+</body>
+
+</html>

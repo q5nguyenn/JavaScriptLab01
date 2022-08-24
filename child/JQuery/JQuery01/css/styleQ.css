@@ -1,0 +1,16 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*Globla*/
+.q-hover {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.q-hover:hover {
+    cursor: pointer;
+    border: 2px solid #007bff;
+}
+.q-test {
+  border: 2px solid red;
+}
